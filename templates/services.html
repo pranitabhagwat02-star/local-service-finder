@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Services - Local Service Finder</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <style>
+
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            height: 100%;
+        }
+
+        .service-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+        }
+
+        .service-icon {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .service-card h3 {
+            margin-bottom: 20px;
+        }
+
+        .service-card a {
+            width: 80%;
+        }
+
+        footer {
+            margin-top: 60px;
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-dark bg-primary">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="/">
+            🛠 Local Service Finder
+        </a>
+
+        <div>
+
+            <a href="/" class="btn btn-light me-2">
+                Home
+            </a>
+
+            <a href="/about" class="btn btn-light me-2">
+                About
+            </a>
+
+            <a href="/contact" class="btn btn-light me-2">
+                Contact
+            </a>
+
+            <a href="/login" class="btn btn-warning">
+                Login
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= MAIN ================= -->
+
+<div class="container">
+
+
+    <h1 class="page-title">
+        🔧 Our Services
+    </h1>
+
+
+    <!-- ================= SEARCH ================= -->
+
+    <form onsubmit="return false;">
+
+        <div class="input-group mb-5">
+
+            <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Search services..."
+                onkeyup="searchServices()"
+            >
+
+            <button
+                type="button"
+                class="btn btn-primary"
+                onclick="searchServices()"
+            >
+                🔍 Search
+            </button>
+
+        </div>
+
+    </form>
+
+
+    <!-- ================= SERVICES ================= -->
+
+    <div class="row g-4" id="servicesContainer">
+
+
+        <!-- ELECTRICIAN -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Electrician
+                </h3>
+
+                <a
+                    href="/service/Electrician"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PLUMBER -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚰
+                </div>
+
+                <h3>
+                    Plumber
+                </h3>
+
+                <a
+                    href="/service/Plumber"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CARPENTER -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🪚
+                </div>
+
+                <h3>
+                    Carpenter
+                </h3>
+
+                <a
+                    href="/service/Carpenter"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PAINTER -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🎨
+                </div>
+
+                <h3>
+                    Painter
+                </h3>
+
+                <a
+                    href="/service/Painter"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- AC REPAIR -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    ❄️
+                </div>
+
+                <h3>
+                    AC Repair
+                </h3>
+
+                <a
+                    href="/service/AC%20Repair"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CLEANING SERVICE -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🧹
+                </div>
+
+                <h3>
+                    Cleaning Service
+                </h3>
+
+                <a
+                    href="/service/Cleaning%20Service"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- COMPUTER REPAIR -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Computer Repair
+                </h3>
+
+                <a
+                    href="/service/Computer%20Repair"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- MOBILE REPAIR -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📱
+                </div>
+
+                <h3>
+                    Mobile Repair
+                </h3>
+
+                <a
+                    href="/service/Mobile%20Repair"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- HOME TUTOR -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📚
+                </div>
+
+                <h3>
+                    Home Tutor
+                </h3>
+
+                <a
+                    href="/service/Home%20Tutor"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BEAUTY PARLOUR -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    💇‍♀️
+                </div>
+
+                <h3>
+                    Beauty Parlour
+                </h3>
+
+                <a
+                    href="/service/Beauty%20Parlour"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PHOTOGRAPHER -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    📸
+                </div>
+
+                <h3>
+                    Photographer
+                </h3>
+
+                <a
+                    href="/service/Photographer"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- CAR MECHANIC -->
+
+        <div class="col-md-4 col-lg-3 service-item">
+
+            <div class="service-card">
+
+                <div class="service-icon">
+                    🚗
+                </div>
+
+                <h3>
+                    Car Mechanic
+                </h3>
+
+                <a
+                    href="/service/Car%20Mechanic"
+                    class="btn btn-outline-primary"
+                >
+                    View Details
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="bg-dark text-white text-center py-4">
+
+    © 2026 Local Service Finder
+
+</footer>
+
+
+<!-- ================= SEARCH JAVASCRIPT ================= -->
+
+<script>
+
+function searchServices() {
+
+    let input = document.getElementById("searchInput");
+
+    let searchText = input.value.toLowerCase().trim();
+
+    let services = document.querySelectorAll(".service-item");
+
+
+    services.forEach(function(service) {
+
+        let serviceName =
+            service.querySelector("h3").innerText.toLowerCase();
+
+
+        if (serviceName.includes(searchText)) {
+
+            service.style.display = "";
+
+        } else {
+
+            service.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+
+</body>
+
+</html>

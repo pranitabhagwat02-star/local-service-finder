@@ -1,0 +1,17 @@
+body{
+    margin: 20px;
+    border: 5px;
+    padding: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    min-height: calc();
+    box-sizing: border-box;
+}
+
+
+header{
+    background-color: lightblue;
+    text-align: 0;
+    color: black;
+    padding: 1px;
+    
+}
